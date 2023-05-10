@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  class="light-style layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="../assets/"
+  data-template="vertical-menu-template-free"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <title>Dashboard  | HealthFusion </title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon"  href="../assets/img/favicon/hf-logo-s.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="../assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="../assets/vendor/js/helpers.js"></script>
+
+   
+    <script src="../assets/js/config.js"></script>
+    <!-- <script src="../assets/js/script.js"></script> -->
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+          <div class="app-brand demo">
+            <!-- Logo -->
+              <div class="app-brand justify-content-center">
+                <img src="..\assets\img\favicon\hf-logo.png"  style="height: 60px;width: 60px; margin-bottom: 5px;" alt="">
+                <a href="dashboard.html" class="app-brand-link gap-3">
+                  
+                  
+                  
+                  <span class="app-brand-text ani  fw-bolder" style="font-size:x-large;"> HealthFusion</span>
+                </a>
+              </div>
+              <!-- /Logo -->
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+              <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <!-- Dashboard -->
+            <li class="menu-item active">
+              <a href="dashboard.html" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Dashboard</div>
+              </a>
+            </li>
+
+          
+
+            <li class="menu-header small text-uppercase ">
+              <span class="menu-header-text">Pages</span>
+            </li>
+            <li class="menu-item ani">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div data-i18n="Account Settings">Account Settings</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="pages-account-settings-account.html" class="menu-link">
+                    <div data-i18n="Account">Account</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="pages-account-settings-notifications.html" class="menu-link">
+                    <div data-i18n="Notifications">Notifications</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="pages-account-settings-connections.html" class="menu-link">
+                    <div data-i18n="Connections">Connections</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                <div data-i18n="Authentications">Authentications</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="auth-login-basic.html" class="menu-link" target="_blank">
+                    <div data-i18n="Basic">Login</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="auth-register-basic.html" class="menu-link" target="_blank">
+                    <div data-i18n="Basic">Register</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
+                    <div data-i18n="Basic">Forgot Password</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                <div data-i18n="Misc">Misc</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="pages-misc-error.html" class="menu-link">
+                    <div data-i18n="Error">Error</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="pages-misc-under-maintenance.html" class="menu-link">
+                    <div data-i18n="Under Maintenance">Under Maintenance</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
+
+            <!-- Forms & Tables -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Records</span></li>
+            <!-- Forms -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-detail"></i>
+                <div data-i18n="Form Elements">Health Record</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="" class="menu-link">
+                    <div data-i18n="Basic Inputs">Personal</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="" class="menu-link">
+                    <div data-i18n="Input groups">Family</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-detail"></i>
+                <div data-i18n="Form Layouts">Medicine Record</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="" class="menu-link">
+                    <div data-i18n="Vertical Form">Personal</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="" class="menu-link">
+                    <div data-i18n="Horizontal Form">Family</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
+            <!-- Misc -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Misc</span></li>
+            <li class="menu-item">
+              <a
+                href="mailto:jatinbansal0709@gmail.com"
+                target="_blank"
+                class="menu-link"
+              >
+                <i class="menu-icon tf-icons bx bx-support" href=""></i>
+                <div>Support</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                href=""
+                target="_blank"
+                class="menu-link"
+              >
+                <i class="menu-icon tf-icons bx bx-file"></i>
+                <div data-i18n="Documentation">Documentation</div>
+              </a>
+            </li>
+          </ul>
+        </aside>
+        <!-- / Menu -->
+
+        <!-- Layout container -->
+        <div class="layout-page">
+          <!-- Navbar -->
+
+          <nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar"
+          >
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="bx bx-menu bx-sm"></i>
+              </a>
+            </div>
+
+            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+              <!-- Search -->
+              <div class="navbar-nav align-items-center">
+                <div class="nav-item d-flex align-items-center">
+                  <i class="bx bx-search fs-4 lh-0"></i>
+                  <input
+                    type="text"
+                    class="form-control border-0 shadow-none"
+                    placeholder="Search..."
+                    aria-label="Search..."
+                  />
+                </div>
+              </div>
+              <!-- /Search -->
+
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- Place this tag where you want the button to render. -->
+                <li class="nav-item lh-1 me-3">
+                  <a
+                    class="github-button"
+                    href="https://github.com/themeselection/sneat-html-admin-template-free"
+                    data-icon="octicon-star"
+                    data-size="large"
+                    data-show-count="true"
+                    aria-label="Star themeselection/sneat-html-admin-template-free on GitHub"
+                    >Star</a
+                  >
+                </li>
+
+                <!-- User -->
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                    <div class="avatar avatar-online">
+                      <img src="../assets/img/avatars/userlogo.jpg" alt class="w-px-40 h-auto rounded-circle" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex">
+                          <div class="flex-shrink-0 me-3">
+                            <div class="avatar avatar-online">
+                              <img src="../assets/img/avatars/userlogo.jpg" alt class="w-px-40 h-auto rounded-circle" />
+                            </div>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="fw-semibold d-block username"></span>
+                            <small class="text-muted">Admin</small>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bx bx-user me-2"></i>
+                        <span class="align-middle">My Profile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bx bx-cog me-2"></i>
+                        <span class="align-middle">Settings</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <span class="d-flex align-items-center align-middle">
+                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
+                          <span class="flex-grow-1 align-middle">Billing</span>
+                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="auth-login-basic.html">
+                        <i class="bx bx-power-off me-2"></i>
+                        <span id="logoutbtn" class="align-middle">Log Out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ User -->
+              </ul>
+            </div>
+          </nav>
+
+          <!-- / Navbar -->
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+
+
+            <style>
+
+button {
+    padding: 10px 20px;
+    background-color: #9193ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .ani:hover{
+    filter:drop-shadow(2px 10px 9px hwb(240 70% 2%));
+    
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hwb(240 91% 0%);
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+     align-self: center;
+     margin-left: 25%;
+  }
+  
+  form label, form input[type="submit"] {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="number"],
+  form input[type="date"],
+  form input[type="tel"] {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: lightgray;
+  }
+  
+  .no-outline:focus {
+  outline: none;
+}
+
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+}
+            </style>
+
+
+
+
+
+
+            <br><br><br>
+
+            <div class="row">
+              <div class="col">
+                <h1 style="margin-top: 15px;text-align: center; ">&nbsp;&nbsp;Manage the Health of your Family with <span style="color: #696cff;">HealthFusion</span></h1>
+              </div>
+              <div class="col-md-auto">
+                <button class="shadow-lg ani" id="openForm" style="width: 100px ; align-self:flex-end ; margin-right: 50px; text-shadow: 1px 1px 1px white; border-radius: 17px;">Add Member <i class="bx bx-user-plus" style="font-size: x-large;"></i></button>
+                
+              </div>
+              
+            </div>
+
+
+            
+
+            <div id="formContainer" style="display: none;">
+              <form style="box-shadow: 0px 5px 5px 6px #9fa1f7">
+                <label for="name">Name:</label>
+                <div class="input-group input-group-merge">
+                  <span id="basic-icon-default-fullname2" class="input-group-text"
+                    ><i class="bx bx-user"></i
+                  ></span>
+                <input class="form-control no-outline" type="text" id="name" name="name" placeholder="Enter the name " required ></div>
+                <br><br>
+                <label for="email">Email:</label>
+                <div class="input-group input-group-merge">
+                  <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                <input class="form-control" type="email" id="email" name="email" placeholder="Fill your E-mail " required></div>
+                <br><br>
+                <label for="age">Age:</label>
+                <div class="input-group input-group-merge">
+                  <span class="input-group-text"><i class="bx bx-circle"></i></span>
+                <input class="form-control" type="number" id="age" name="age" required></div>
+                <br><br>
+                <label for="dob">Date of Birth:</label>
+                <input class="form-control" type="date" id="dob" name="dob" required>
+                <br><br>
+                <label for="phno">Phone Number:</label>
+                <div class="input-group input-group-merge">
+                  <span class="input-group-text"><i class="bx bx-phone"></i></span>
+                <input class="form-control" type="tel" id="phno" name="phno" required></div>
+                <br><br>
+                <button class="shadow-lg ani" type="button" id="more-details-button">More Details <i class="bx bx-right-arrow-alt" style="font-size: x-large;"></i></button>
+                <div id="more-details-form" style="display:none;">
+                  <input class="form-control" type="text" id="health_issue" placeholder="Enter Health Issue">
+                  <br><br>
+                  <input class="form-control" type="text" id="medicine_timing" placeholder="Enter Medicine Timing">
+                </div>
+                <br><br>
+                <button class="shadow-lg ani" type="submit">submit</button>
+              </form>
+            </div>
+
+            
+            <table id="entriesTable">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Age</th>
+                  
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody id="entriesBody">
+                <!-- Form entries will be displayed here -->
+              </tbody>
+            </table>
+
+            <script>
+              const openFormButton = document.getElementById("openForm");
+const formContainer = document.getElementById("formContainer");
+const entriesBody = document.getElementById("entriesBody");
+const moreDetailsButton = document.querySelector('#more-details-button');
+const moreDetailsForm = document.querySelector('#more-details-form');
+
+const cUser = JSON.parse(localStorage.getItem("currentUser"))
+
+
+
+moreDetailsButton.addEventListener('click', () => {
+  moreDetailsForm.style.display = 'block';
+});
+
+
+
+const familyData = JSON.parse(localStorage.getItem(cUser.username+"family"));
+if(familyData != null){
+  familyData.forEach(element => {
+    const entry = document.createElement("tr");
+    entry.innerHTML = `
+      <td>${element.name}</td>
+      <td>${element.email}</td>
+      <td>${element.age}</td>
+
+      <td>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=${"#"+element.name}>View</button>
+      </td>
+      <div class="modal fade" id=${element.name} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 style="color: #696cff;text-align: center; ">Patient Full Report</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                
+                <h4 class="modal-title" id="exampleModalLabel">Name: ${element.name}</h4>
+              <h4>E-mail : ${element.email ? element.email : "None"}</h4>
+              <h4>Age : ${element.age ? element.age : "None"}</h4>
+              <h4>Ph-no. : ${element.phno ? element.phno : "None"}</h4>
+
+              
+              <h4>Health Issues: ${element.healthIssue ? element.healthIssue : "None"}</h4>
+              <h4>Medicine Timing: ${element.medTime ? element.medTime : "None"}</h4>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    entriesBody.appendChild(entry);
+  });
+}
+
+
+openFormButton.addEventListener("click", function() {
+  formContainer.style.display = "block";
+});
+
+const form = document.querySelector("form");
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  const name = form.elements.name.value;
+  const email = form.elements.email.value;
+  const age = form.elements.age.value;
+  const dob = form.elements.dob.value;
+  const phno = form.elements.phno.value;
+  const hIssue = form.elements.health_issue.value;
+  const medTime = form.elements.medicine_timing.value;
+
+  const formData = [{
+    "name": name,
+    "email": email,
+    "age": age,
+    "dob": dob,
+    "phno": phno,
+    "healthIssue": hIssue ? hIssue : "",
+    "medTime": medTime ? medTime : ""
+  }];
+
+
+  
+  if(familyData != null){
+    const newData = [...familyData,...formData];
+    localStorage.setItem(cUser.username+"family",JSON.stringify(newData));
+    formData.forEach(element => {
+      const entry = document.createElement("tr");
+      entry.innerHTML = `
+        <td>${element.name}</td>
+        <td>${element.email}</td>
+        <td>${element.age}</td>
+        
+        <td><a href="#">GO TO</a></td>
+      `;
+      entriesBody.appendChild(entry);
+    });
+  }else{
+    localStorage.setItem(cUser.username+"family",JSON.stringify(formData));
+    formData.forEach( ele => {
+      const entry = document.createElement("tr");
+      entry.innerHTML = `
+        <td>${ele.name}</td>
+        <td>${ele.email}</td>
+        <td>${ele.age}</td>
+        
+      `;
+      entriesBody.appendChild(entry);
+    })
+  }
+
+  
+
+  
+  
+  formContainer.style.display = "none";
+});
+
+            </script>
+            
+            
+
+
+
+
+
+
+
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="row">
+                <div class="col-lg-8 mb-4 order-0">
+                  <div class="card ani">
+                    <div class="d-flex align-items-end row">
+                      <div class="col-sm-7">
+                        <div class="card-body">
+                          <h5 class="card-title text-primary">Welcome Back  <span class="username" style="color: crimson; font-weight: 900;" ></span> 🎉</h5>
+                          <p class="mb-4">
+                            You have done <span class="fw-bold">72%</span> more Progress in your health routine. Check your new badge in
+                            your profile.
+                          </p>
+
+                          <a href="javascript:;" class="btn btn-sm btn-outline-primary ani">View Badges</a>
+                        </div>
+                      </div>
+                      <div class="col-sm-5 text-center text-sm-left">
+                        <div class="card-body pb-0 px-0 px-md-4">
+                          <img
+                            src="../assets/img/backgrounds/man on computer svg.jpg"
+                            height="190"
+                            alt="View Badge User"
+                            data-app-dark-img="illustrations/man-with-laptop-dark.png"
+                            data-app-light-img="illustrations/man-with-laptop-light.png"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 order-1">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-12 col-6 mb-4">
+                      <div class="card ani">
+                        <div class="card-body">
+                          <div class="card-title d-flex align-items-start justify-content-between">
+                            <div class="avatar flex-shrink-0">
+                              <img
+                                src="../assets/img/icons/unicons/cc-success.png"
+                                alt="chart success"
+                                class="rounded"
+                              />
+                            </div>
+                            <div class="dropdown">
+                              <button
+                                class="btn p-0"
+                                type="button"
+                                id="cardOpt3"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                              >
+                                <i class="bx bx-dots-vertical-rounded"></i>
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
+                                <a class="dropdown-item" href="pages-misc-under-maintenance.html">View More</a>
+                                <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="fw-semibold d-block mb-1">Physical Health</span>
+                          <h3 class="card-title mb-2">Excellent</h3>
+                          <!-- <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +72.80%</small> -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-6 mb-4">
+                      <div class="card ani">
+                        <div class="card-body">
+                          <div class="card-title d-flex align-items-start justify-content-between">
+                            <div class="avatar flex-shrink-0">
+                              <img
+                                src="../assets/img/icons/unicons/wallet-info.png"
+                                alt="Credit Card"
+                                class="rounded"
+                              />
+                            </div>
+                            <div class="dropdown">
+                              <button
+                                class="btn p-0"
+                                type="button"
+                                id="cardOpt6"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                              >
+                                <i class="bx bx-dots-vertical-rounded"></i>
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
+                                <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                                <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                              </div>
+                            </div>
+                          </div>
+                          <span>Checkup</span> <br> <br> 
+                          <h3 class="card-title text-nowrap mb-1"  style="font-size: large; color: red;" id="demo"></h3>
+                          
+                          <!-- <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Total Revenue -->
+                <div class="col-12 col-lg-8 order-2 order-md-3 order-lg-2 mb-4">
+                  <div class="card ani">
+                    <div class="row row-bordered g-0">
+                      <div class="col-md-8">
+                        <h5 class="card-header m-0 me-2 pb-3">Total Health Care</h5>
+                        <!-- <div id="totalRevenueChart" class="px-2"></div> -->
+                        <img src="../assets/img/backgrounds/fam care svg.jpg" style="height: 80%; width: 100%;" alt="" >
+
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card-body">
+                            
+                          <div class="text-center">
+                            <div class="dropdown">
+                              <button
+                                class="btn btn-sm btn-outline-primary dropdown-toggle"
+                                type="button"
+                                id="growthReportId"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                              >
+                                2023
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="growthReportId">
+                                <a class="dropdown-item" href="javascript:void(0);">2022</a>
+                                <a class="dropdown-item" href="javascript:void(0);">2021</a>
+                                <a class="dropdown-item" href="javascript:void(0);">2020</a>
+                                <a class="dropdown-item" href="javascript:void(0);">2019</a>
+
+                              </div>
+                            </div>
+                            
+                          </div>
+
+                        </div>
+
+                         
+                        <div id="growthChart"></div>
+                        <div class="text-center fw-semibold pt-3 mb-2">62% Fitness  Growth</div>
+
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Total Revenue -->
+                <div class="col-12 col-md-8 col-lg-4 order-3 order-md-2">
+                  <div class="row">
+                    <div class="col-6 mb-4">
+                      <div class="card ani">
+                        <div class="card-body">
+                          <div class="card-title d-flex align-items-start justify-content-between">
+                            <div class="avatar flex-shrink-0">
+                              <img src="../assets/img/icons/unicons/paypal.png" alt="Credit Card" class="rounded" />
+                            </div>
+                            <div class="dropdown">
+                              <button
+                                class="btn p-0"
+                                type="button"
+                                id="cardOpt4"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                              >
+                                <i class="bx bx-dots-vertical-rounded"></i>
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt4">
+                                <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                                <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="d-block mb-1">SpO2 Level</span>
+                          <br>
+                          <h3 class="card-title text-nowrap mb-2">99%</h3>
+                          <!-- <small class="text-danger fw-semibold"><i class="bx bx-down-arrow-alt"></i> -14.82%</small> -->
+                        <br>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 mb-4">
+                      <div class="card ani">
+                        <div class="card-body">
+                          <div class="card-title d-flex align-items-start justify-content-between">
+                            <div class="avatar flex-shrink-0">
+                              <img src="../assets/img/icons/unicons/chart.png" alt="Credit Card" class="rounded" />
+                            </div>
+                            <div class="dropdown">
+                              <button
+                                class="btn p-0"
+                                type="button"
+                                id="cardOpt1"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                              >
+                                <i class="bx bx-dots-vertical-rounded"></i>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="cardOpt1">
+                                <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                                <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="fw-semibold d-block mb-1">Medicine Timing</span>
+                          <h3 class="card-title mb-2">Today</h3>
+                          <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i>Vitamin-B Tablet &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   2 in a day</small>
+                        </div>
+                      </div>
+                    </div>
+                    
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Mar 25, 2023 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+
+
+
+
+
+
+
+  
+                    <div class="col-12 mb-4">
+                      <div class="card ani">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
+                            
+
+                            <img src="../assets/img/backgrounds/fam care-2 svg.jpg" style="height: 70%; width: 80%; margin-left: 10%;" alt="" >
+
+                            <!-- </div> -->
+                            <!-- <div id="profileReportChart"></div> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <!-- Order Statistics -->
+                <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4" style="width: 100%;">
+                  <div class="card ani h-100">
+                    <div class="card-header d-flex align-items-center justify-content-between pb-0">
+                      <div class="card-title mb-0">
+                        <div class="flex-shrink-0 me-3">
+                          <div class="avatar avatar-online">
+                            <img src="../assets/img/avatars/userlogo.jpg" alt class="w-px-40 h-auto rounded-circle" />
+                          </div>
+                        </div>
+                        <h2 class="m-0 me-2">Plus Subscription</h2>
+                        <small class="text-muted">You are our Plus Member</small>
+                      </div>
+                      <div class="dropdown">
+                        <button
+                          class="btn p-0"
+                          type="button"
+                          id="orederStatistics"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <i class="bx bx-dots-vertical-rounded"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="orederStatistics">
+                          <a class="dropdown-item" href="javascript:void(0);">Select All</a>
+                          <a class="dropdown-item" href="javascript:void(0);">Clear History</a>
+                          <a class="dropdown-item" href="javascript:void(0);">Share History</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="d-flex flex-column align-items-center gap-1">
+                          <br><br>
+                          <div class="row">
+                            <div class="col">
+                          <h4 class="mb-2" style="color: #696cff; margin-top: 6px;">Payment History</h4>
+                              
+                            </div>
+                            
+                            <div class="col-md-auto">
+        <a href="dashboard.html"  class="btn btn-primary">Renew Subscription</a>
+                              
+                              
+                            </div>
+                            
+                          </div>
+
+                          <!-- <span>Total Purchase </span> -->
+                        </div>
+                        <!-- <div id="orderStatisticsChart"></div> -->
+                        <br><br><br><br><br>
+                      </div>
+                      <ul class="p-0 m-0">
+                        <li class="d-flex mb-4 pb-1">
+                          <div class="avatar flex-shrink-0">
+                            <img
+                              src="../assets/img/icons/unicons/wallet-info.png"
+                              alt="Credit Card"
+                              class="rounded"
+                            />
+                          </div>
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="me-2">
+                              <h6 class="mb-0">&nbsp;&nbsp;&nbsp;&nbsp;12-03-2023</h6>
+                              <small class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;Monday</small>
+                            </div>
+                            <div class="user-progress">
+                              <small class="fw-semibold">Rs. 500 </small>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="d-flex mb-4 pb-1">
+                          <div class="avatar flex-shrink-0">
+                            <img
+                              src="../assets/img/icons/unicons/wallet-info.png"
+                              alt="Credit Card"
+                              class="rounded"
+                            />
+                          </div>
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="me-2">
+                              <h6 class="mb-0">&nbsp;&nbsp;&nbsp;&nbsp;12-02-2023</h6>
+                              <small class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;Wednesday</small>
+                            </div>
+                            <div class="user-progress">
+                              <small class="fw-semibold">Rs. 500 </small>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="d-flex mb-4 pb-1">
+                          <div class="avatar flex-shrink-0">
+                            <img
+                              src="../assets/img/icons/unicons/wallet-info.png"
+                              alt="Credit Card"
+                              class="rounded"
+                            />
+                          </div>
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="me-2">
+                              <h6 class="mb-0">&nbsp;&nbsp;&nbsp;&nbsp;12-01-2023</h6>
+                              <small class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;Saturday</small>
+                            </div>
+                            <div class="user-progress">
+                              <small class="fw-semibold">Rs. 500 </small>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="d-flex">
+                          <div class="avatar flex-shrink-0">
+                            <img
+                              src="../assets/img/icons/unicons/wallet-info.png"
+                              alt="Credit Card"
+                              class="rounded"
+                            />
+                          </div>
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="me-2">
+                              <h6 class="mb-0">&nbsp;&nbsp;&nbsp;&nbsp;12-12-2022</h6>
+                              <small class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;Tuesday</small>
+                            </div>
+                            <div class="user-progress">
+                              <small class="fw-semibold">Rs. 500 </small>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+               
+                <!--/ Transactions -->
+              </div>
+            </div>
+            <!-- / Content -->
+
+            <!-- Footer -->
+            <footer class="content-footer footer bg-footer-theme">
+              <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+                <div class="mb-2 mb-md-0">
+                  ©
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  , All Rights Reserved <br> Made by
+                  <a href="" target="_blank" class="footer-link fw-bolder">Team - Bro-code.</a>
+                </div>
+                <div>
+                  <a href="" class="footer-link me-4" target="_blank">License</a>
+                  <a href="" target="_blank" class="footer-link me-4">More Themes</a>
+
+                  <a
+                    href=""
+                    target="_blank"
+                    class="footer-link me-4"
+                    >Documentation</a
+                  >
+
+                  <a
+                    href=""
+                    target="_blank"
+                    class="footer-link me-4"
+                    >Support</a
+                  >
+                </div>
+              </div>
+            </footer>
+            <!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="../assets/vendor/libs/popper/popper.js"></script>
+    <script src="../assets/vendor/js/bootstrap.js"></script>
+    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="../assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+    <!-- Main JS -->
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="../assets/js/dashboards-analytics.js"></script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="../assets/js/index.js"></script>
+
+  </body>
+</html>
