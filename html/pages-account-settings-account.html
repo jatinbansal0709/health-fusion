@@ -272,7 +272,8 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="../assets/img/avatars/userlogo.jpg" alt class="w-px-40 h-auto rounded-circle" />
+                          
+                          <img src="../assets/img/avatars/userlogo.jpg" alt class="w-px-40 h-auto rounded-circle preview-avatar"   />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -281,7 +282,7 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <img src="../assets/img/avatars/userlogo.jpg" alt class="w-px-40 h-auto rounded-circle" />
+                              <img src="../assets/img/avatars/userlogo.jpg" alt class="w-px-40 h-auto rounded-circle thumbnail-avatar"  />
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -295,7 +296,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="pages-account-settings-account.html">
                         <i class="bx bx-user me-2"></i>
                         <span class="align-middle">My Profile</span>
                       </a>
@@ -365,10 +366,11 @@
                         <img
                           src="../assets/img/avatars/userlogo.jpg"
                           alt="user-avatar"
-                          class="d-block rounded"
+                          class="d-block rounded-circle"
                           height="100"
                           width="100"
-                          id="uploadedAvatar"
+                          id="uploadedAvatar" 
+                          style="border-radius: 50%;"
                         />
                         <div class="button-wrapper">
                           <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
@@ -391,6 +393,44 @@
                         </div>
                       </div>
                     </div>
+                    <style>
+                      #uploadedAvatar {
+                        border-radius: 50%;
+                      }
+                    </style>
+
+<script>
+const uploadInput = document.getElementById("upload");
+const uploadedAvatars = document.querySelectorAll(".uploaded-avatar");
+const previewAvatar = document.querySelector(".preview-avatar");
+const thumbnailAvatar = document.querySelector(".thumbnail-avatar");
+const resetButton = document.querySelector(".account-image-reset");
+
+uploadInput.addEventListener("change", function() {
+  const file = this.files[0];
+  const reader = new FileReader();
+  reader.addEventListener("load", function() {
+    uploadedAvatars.forEach(function(uploadedAvatar) {
+      uploadedAvatar.src = reader.result;
+    });
+    previewAvatar.src = reader.result;
+    thumbnailAvatar.src = reader.result;
+  });
+  reader.readAsDataURL(file);
+});
+
+resetButton.addEventListener("click", function() {
+  uploadedAvatars.forEach(function(uploadedAvatar) {
+    uploadedAvatar.src = "../assets/img/avatars/userlogo.jpg";
+  });
+  previewAvatar.src = "../assets/img/avatars/userlogo.jpg";
+  thumbnailAvatar.src = "../assets/img/avatars/userlogo.jpg";
+});
+</script>
+
+
+
+
                     <hr class="my-0" />
                     <div class="card-body">
                       <form id="formAccountSettings" method="POST" onsubmit="return false">

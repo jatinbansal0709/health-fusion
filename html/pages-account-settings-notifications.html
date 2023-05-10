@@ -293,7 +293,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="pages-account-settings-account.html">
                         <i class="bx bx-user me-2"></i>
                         <span class="align-middle">My Profile</span>
                       </a>
@@ -373,7 +373,7 @@
                             </select>
                           </div>
                           <div class="mt-4">
-                            <button type="submit" class="btn btn-primary me-2">Save changes</button>
+                            <button  class="btn btn-primary me-2" id="button">Save changes</button>
                             <button type="reset" class="btn btn-outline-secondary">Discard</button>
                           </div>
                         </div>
@@ -384,6 +384,28 @@
                 </div>
               </div>
             </div>
+
+
+
+            <script>
+              let button = document.getElementById('button');
+          
+              button.addEventListener('click', function() {
+                displayNotification('Button clicked!');
+              });
+          
+              function displayNotification(message) {
+                if (Notification.permission === 'granted') {
+                  new Notification(message);
+                } else if (Notification.permission !== 'denied') {
+                  Notification.requestPermission().then(function(permission) {
+                    if (permission === 'granted') {
+                      new Notification(message);
+                    }
+                  });
+                }
+              }
+            </script>
             <!-- / Content -->
 
             <!-- Footer -->
@@ -395,7 +417,7 @@
                     document.write(new Date().getFullYear());
                   </script>
                   , Made by
-                  <a href="" target="_blank" class="footer-link fw-bolder">Team - Bro-code.</a>
+                  <a href="" target="_blank" class="footer-link fw-bolder">Jatin</a>
                 </div>
                 <div>
                   <a href="" class="footer-link me-4" target="_blank">License</a>

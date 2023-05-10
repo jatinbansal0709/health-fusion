@@ -295,7 +295,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="pages-account-settings-account.html">
                         <i class="bx bx-user me-2"></i>
                         <span class="align-middle">My Profile</span>
                       </a>
@@ -362,9 +362,9 @@ button {
     background-color: hwb(240 91% 0%);
     padding: 20px;
     border-radius: 5px;
-    width: 50%;
+    width: 60%;
      align-self: center;
-     margin-left: 25%;
+     margin-left: 20%;
   }
   
   form label, form input[type="submit"] {
@@ -386,13 +386,18 @@ button {
   }
   
   table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 95%;
+    align-content: center;
+    /* border-collapse: collapse; */
     margin-top: 20px;
+    margin-left: 30px;
+    table-layout: auto;
+
   }
+ 
   
   th, td {
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(143, 143, 143);
     padding: 10px;
     text-align: left;
   }
@@ -405,6 +410,19 @@ button {
   outline: none;
 }
 
+
+@media (max-width:412px){
+  table{
+    width:85%;
+  }
+  form{
+    width: 90%;
+    margin-left: 23px;
+  }
+  pop{
+    margin-left: 50%;
+  }
+}
 
 input {
   border-top-style: hidden;
@@ -426,7 +444,7 @@ input {
                 <h1 style="margin-top: 15px;text-align: center; ">&nbsp;&nbsp;Manage the Health of your Family with <span style="color: #696cff;">HealthFusion</span></h1>
               </div>
               <div class="col-md-auto">
-                <button class="shadow-lg ani" id="openForm" style="width: 100px ; align-self:flex-end ; margin-right: 50px; text-shadow: 1px 1px 1px white; border-radius: 17px;">Add Member <i class="bx bx-user-plus" style="font-size: x-large;"></i></button>
+                <button class="shadow-lg ani pop" id="openForm" style="width: 100px ; align-self:flex-end ; margin-right: 50px; text-shadow: 1px 1px 1px white; border-radius: 17px;">Add Member <i class="bx bx-user-plus" style="font-size: x-large;"></i></button>
                 
               </div>
               
@@ -466,22 +484,69 @@ input {
                 <div id="more-details-form" style="display:none;">
                   <input class="form-control" type="text" id="health_issue" placeholder="Enter Health Issue">
                   <br><br>
-                  <input class="form-control" type="text" id="medicine_timing" placeholder="Enter Medicine Timing">
+                  <h5>Medicine Timing <i class="bx bx-clock" style="font-size: xx-large;"></i> </h5>
+                  <input class="form-control" type="time" id="medicine_timing" placeholder="Enter Medicine Timing">
+                  <br>
+                  <h5>
+                    Upload Report <i class="bx bx-up-arrow-alt" style="font-size: xx-large;"></i>
+                  </h5>
+                  <input class="form-control" type="file" id="myFile" name="filename" placeholder="Upload Report">
+                  <div class="flex-grow-1 row">
+                    <div class="col-9 mb-sm-0 mb-2">
+                      <br>
+                      <br>
+                      <h6 class="mb-0">Notification's</h6>
+                      <small class="text-muted">Reminder & schedules</small>
+                    </div>
+                    <div class="col-3 text-end">
+                      <div class="form-check form-switch">
+                        <br>
+                        <br>
+                        <input class="form-check-input float-end" id="checkbox" type="checkbox" role="switch"  />
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <br><br>
                 <button class="shadow-lg ani" type="submit">submit</button>
               </form>
             </div>
 
+
+
+            <script>
+              let checkbox = document.getElementById('checkbox');
+          
+              checkbox.addEventListener('change', function() {
+                if (checkbox.checked) {
+                  displayNotification('Connected');
+                }
+              });
+          
+              function displayNotification(message) {
+                if (Notification.permission === 'granted') {
+                  new Notification(message);
+                } else if (Notification.permission !== 'denied') {
+                  Notification.requestPermission().then(function(permission) {
+                    if (permission === 'granted') {
+                      new Notification(message);
+                    }
+                  });
+                }
+              }
+            </script>
+
+
+
             
-            <table id="entriesTable">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Age</th>
+            <table id="entriesTable" style=" border-radius: 50px;"  >
+              <thead >
+                <tr >
+                  <th style="text-align: center; background-color: #9193ff; text-shadow: rgb(164, 161, 161) 2px 2px 2px; font-size:x-large; color: white;">Name</th>
+                  <!-- <th style="text-align: center;background-color: #9193ff; text-shadow: rgb(164, 161, 161) 2px 2px 2px; font-size:x-large; color: white">Email</th> -->
+                  <th style="text-align: center;background-color: #9193ff;text-shadow: rgb(164, 161, 161) 2px 2px 2px; font-size:x-large; color: white">Age</th>
                   
-                  <th>Details</th>
+                  <th style="text-align: center;background-color: #9193ff;text-shadow: rgb(164, 161, 161) 2px 2px 2px; font-size:x-large; color: white">Details</th>
                 </tr>
               </thead>
               <tbody id="entriesBody">
@@ -511,11 +576,11 @@ if(familyData != null){
   familyData.forEach(element => {
     const entry = document.createElement("tr");
     entry.innerHTML = `
-      <td>${element.name}</td>
-      <td>${element.email}</td>
-      <td>${element.age}</td>
+      <td style="text-align: center;font-size:large; background-color: #e1e2ff;">${element.name}</td>
+      
+      <td style="text-align: center;font-size:large;background-color: #e1e2ff;">${element.age}</td>
 
-      <td>
+      <td style="text-align: center;background-color: #e1e2ff;">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=${"#"+element.name}>View</button>
       </td>
       <div class="modal fade" id=${element.name} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -536,9 +601,12 @@ if(familyData != null){
               <h4>Health Issues: ${element.healthIssue ? element.healthIssue : "None"}</h4>
               <h4>Medicine Timing: ${element.medTime ? element.medTime : "None"}</h4>
 
+              <div id="pdf-container"></div>
+
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger">Edit</button>
               <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
@@ -546,6 +614,13 @@ if(familyData != null){
       </div>
     `;
     entriesBody.appendChild(entry);
+    let pdfUrl = null;
+    console.log(element);
+    if(element.file != null){
+      console.log(element.file)
+      let pdfContainer = document.getElementById('pdf-container');
+        pdfContainer.innerHTML = '<embed src="' + element.file + '" type="application/pdf" width="100%" height="600px" />';
+    }
   });
 }
 
@@ -565,7 +640,8 @@ form.addEventListener("submit", function(event) {
   const phno = form.elements.phno.value;
   const hIssue = form.elements.health_issue.value;
   const medTime = form.elements.medicine_timing.value;
-
+  const file = form.elements.myFile.value;
+  
   const formData = [{
     "name": name,
     "email": email,
@@ -573,10 +649,11 @@ form.addEventListener("submit", function(event) {
     "dob": dob,
     "phno": phno,
     "healthIssue": hIssue ? hIssue : "",
-    "medTime": medTime ? medTime : ""
+    "medTime": medTime ? medTime : "",
+    "file": file ? file : null
   }];
 
-
+  console.log(formData);
   
   if(familyData != null){
     const newData = [...familyData,...formData];
@@ -585,7 +662,7 @@ form.addEventListener("submit", function(event) {
       const entry = document.createElement("tr");
       entry.innerHTML = `
         <td>${element.name}</td>
-        <td>${element.email}</td>
+        
         <td>${element.age}</td>
         
         <td><a href="#">GO TO</a></td>
@@ -598,7 +675,7 @@ form.addEventListener("submit", function(event) {
       const entry = document.createElement("tr");
       entry.innerHTML = `
         <td>${ele.name}</td>
-        <td>${ele.email}</td>
+        
         <td>${ele.age}</td>
         
       `;
@@ -843,7 +920,7 @@ form.addEventListener("submit", function(event) {
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Mar 25, 2023 15:37:25").getTime();
+var countDownDate = new Date("Apr 25, 2023 15:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -867,7 +944,7 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "RESCHEDULE";
   }
 }, 1000);
 </script>
